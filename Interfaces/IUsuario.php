@@ -4,5 +4,5 @@
 interface IUsuario
 {
   public function consultarDatos();
-  public function modificarDatos($nombre, $apellido, $fechaNacimiento);
+  public function cargarDatos($nombre, $apellido, $fechaNacimiento, $correo);
 }

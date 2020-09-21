@@ -6,6 +6,7 @@ class Persona implements IUsuario
     private $nombre;
     private $apellido;
     private $fechaNacimiento;
+    private $correo;
 
     public function ingresar()
     {
@@ -67,15 +68,33 @@ class Persona implements IUsuario
       return $this->fechaNacimiento;
     }
 
+
+    /**
+     * @param mixed $correo
+     */
+    public function setCorreo($correo)
+    {
+      $this->correo = $correo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCorreo()
+    {
+      return $this->correo;
+    }
+
     /**
      * Permite consultar los datos básicos de uan presona
      * @return string
      */
     public function consultarDatos ()
     {
-      $datosPersona = "Nombre". $this->getNombre();
-      $datosPersona .= "Apellido". $this->getApellido();
-      $datosPersona .=" Fecha Nacimiento:". $this->getFechaNacimiento();
+      $datosPersona = "Nombre: ". $this->getNombre()." | ";
+      $datosPersona .= "Apellido: ". $this->getApellido()." | ";
+      $datosPersona .=" Fecha Nacimiento: ". $this->getFechaNacimiento()." | ";
+      $datosPersona .=" Correo: ". $this->getCorreo()." | ";
 
       return $datosPersona;
     }
@@ -86,11 +105,12 @@ class Persona implements IUsuario
      * @param $apellido
      * @param $fechaNacimiento
      */
-    public function modificarDatos($nombre, $apellido, $fechaNacimiento)
+    public function cargarDatos($nombre, $apellido, $fechaNacimiento, $correo)
     {
       $this->setFechaNacimiento($fechaNacimiento);
       $this->setApellido($apellido);
       $this->setNombre($nombre);
+      $this->setCorreo(correo);
     }
 
     public function __toString ()
