@@ -34,7 +34,7 @@ class Estudiante extends Persona implements IEntregarTarea
    */
     public function revisarNota()
     {
-      return "Estudiante revisar nota de la tarea".PHP_EOL;
+      return "Estudiante revisa nota de la tarea".PHP_EOL;
     }
 
   /**
