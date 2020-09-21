@@ -4,11 +4,11 @@ _A través de un proyecto sencillo en PHP pretendemos representar algunos princi
 
 ### Pre-requisitos 📋
 
-_Para poder realizar la ejecución por consola de los ejemplo es necesario tener una versión de PHP mayor a 7.0._
+_Para poder realizar la ejecución por consola de los ejemplos es necesario tener una versión de PHP mayor a 7.0._
 
 ## Contexto del ejerccio ✒️
 
-Se realiza el desarrollo de una paltaforma educativa donde los distintos actores (Estudiantes, profesores y padres), intervienen con sus respectivas acciones en la dinámica de asignación, entrega y validación de tareas.
+Se realiza el desarrollo de una plataforma educativa donde los distintos actores (Estudiantes, profesores y padres), intervienen con sus respectivas acciones en la dinámica de asignación, entrega y validación de tareas.
 
 
 ## Principios que se aplicaron 🚀
@@ -25,7 +25,7 @@ Por lo tanto una clase debería estar destinada a una única responsabilidad y n
 **Implementación:**
 
 Tenemos las clase **Profesor** que tienen los métodos **signarTarea** y **calificarTarea**, también tenemos la clase **Estudiante** con el método **entregarTarea**, se requiere realizar una notificación via correo para avisar al profesor o al estudiante que se relaizó dicha accción según correponda.
-Con el fin de respetar el pricipio SOLID #1 hemos creado una clase **Notificacion** en la cual se implementa un método **notificar** que realizar el "envío" del correo, en lugar de realizar la notificación en cada una de las clases que requieren notificar y evitando agregar una razón de cambio adicional.
+Con el fin de respetar el pricipio SOLID #1 hemos creado una clase **Notificacion** en la cual se implementa un método **notificar** que realiza el "envío" del correo, en lugar de realizar la notificación en cada una de las clases que requieren notificar y evitando agregar una razón de cambio adicional.
 
 Implementación sin el principo
 
@@ -87,10 +87,10 @@ $mensaje = "Apreciaso estudiantes ".$estudiante->getNombre()."se le ha asignado 
 echo $notificaAsginacion->notificar($estudiante->getCorreo(), $estudiante->getNombre(), $mensaje );
 ```
 
-Del mismo modo se hará  hace para **entregarTarea** y **calificarTarea**.
+Del mismo modo se hace para **entregarTarea** y **calificarTarea**.
 
 ## *Principio de abierto para su extensión pero cerrado para su modificación
-Este principío lo que establece es que una clase debe ser facilmente extendible sin tener que modificarse internamente.
+Este principio lo que establece es que una clase debe ser facilmente extendible sin tener que modificarse internamente.
 
 **Implementación:**
 
