@@ -104,18 +104,19 @@ class Persona implements IUsuario
      * @param $nombre
      * @param $apellido
      * @param $fechaNacimiento
+     * @param $correo
+     * @param $idPersona
      */
-    public function cargarDatos($nombre, $apellido, $fechaNacimiento, $correo)
+    public function cargarDatos($nombre, $apellido, $fechaNacimiento, $correo, $idPersona = 0)
     {
       $this->setFechaNacimiento($fechaNacimiento);
       $this->setApellido($apellido);
       $this->setNombre($nombre);
-      $this->setCorreo(correo);
+      $this->setCorreo($correo);
     }
 
-    public function __toString ()
-    {
-      return $this->getNombre() ." ". $this->getApellido(). " ". $this->setFechaNacimiento();
+    public function revisarNota() {
+      return "Persona revisar nota de la tarea".PHP_EOL;
     }
 
 }

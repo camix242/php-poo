@@ -2,5 +2,5 @@
 
 interface IEntregarTarea
 {
-  function entregarTarea();
+  function entregarTarea($profe);
 }
